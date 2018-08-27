@@ -29,12 +29,10 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
-
 # Les gems qu'on ajoute nous mêmes
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'devise', '~> 4.2'
-
 
 
 # Use Capistrano for deployment
