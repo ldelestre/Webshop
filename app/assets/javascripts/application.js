@@ -16,7 +16,7 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-//= require owl.carousel
+//= require js/owl.carousel.min
 //= require js/bootstrap.min
 //= require js/google_map
 //= require js/jquery.countTo

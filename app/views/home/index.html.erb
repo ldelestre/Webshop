@@ -1,15 +1,3 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
-	</head>
-	<body>
-
 	<div class="fh5co-loader"></div>
 
 	<div id="page">
@@ -61,7 +49,7 @@
 	<aside id="fh5co-hero" class="js-fullheight">
 		<div class="flexslider js-fullheight">
 			<ul class="slides">
-		   	<li style="background-image: url(images/img_bg_1.jpg);">
+		   	<li style="background: url(<%= asset_path 'img_bg_1.jpg' %>);">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
@@ -76,7 +64,7 @@
 		   			</div>
 		   		</div>
 		   	</li>
-		   	<li style="background-image: url(images/img_bg_2.jpg);">
+		   	<li style="background: url(<%= asset_path 'img_bg_2.jpg' %>);">
 		   		<div class="container">
 		   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
 		   				<div class="slider-text-inner">
@@ -90,7 +78,7 @@
 		   			</div>
 		   		</div>
 		   	</li>
-		   	<li style="background-image: url(images/img_bg_3.jpg);">
+		   	<li style="background: url(<%= asset_path 'img_bg_3.jpg' %>);">
 		   		<div class="container">
 		   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
 		   				<div class="slider-text-inner">
@@ -104,7 +92,7 @@
 		   			</div>
 		   		</div>
 		   	</li>
-		   	<li style="background-image: url(images/img_bg_4.jpg);">
+		   	<li style="background: url(<%= asset_path 'img_bg_4.jpg' %>);">
 		   		<div class="container">
 		   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
 		   				<div class="slider-text-inner">
@@ -170,7 +158,7 @@
 			<div class="row">
 				<div class="col-md-4 text-center animate-box">
 					<div class="product">
-						<div class="product-grid" style="background-image:url(images/product-1.jpg);">
+						<div class="product-grid" style="background: url(<%= asset_path 'product-1.jpg' %>);">
 							<div class="inner">
 								<p>
 									<a href="single.html" class="icon"><i class="icon-shopping-cart"></i></a>
@@ -186,7 +174,7 @@
 				</div>
 				<div class="col-md-4 text-center animate-box">
 					<div class="product">
-						<div class="product-grid" style="background-image:url(images/product-2.jpg);">
+						<div class="product-grid" style="background: url(<%= asset_path 'product-2.jpg' %>);">
 							<span class="sale">Sale</span>
 							<div class="inner">
 								<p>
@@ -203,7 +191,7 @@
 				</div>
 				<div class="col-md-4 text-center animate-box">
 					<div class="product">
-						<div class="product-grid" style="background-image:url(images/product-3.jpg);">
+						<div class="product-grid" style="background: url(<%= asset_path 'product-3.jpg' %>);">
 							<div class="inner">
 								<p>
 									<a href="single.html" class="icon"><i class="icon-shopping-cart"></i></a>
@@ -221,7 +209,7 @@
 			<div class="row">
 				<div class="col-md-4 text-center animate-box">
 					<div class="product">
-						<div class="product-grid" style="background-image:url(images/product-4.jpg);">
+						<div class="product-grid" style="background: url(<%= asset_path 'product-4.jpg' %>);">
 							<div class="inner">
 								<p>
 									<a href="single.html" class="icon"><i class="icon-shopping-cart"></i></a>
@@ -237,7 +225,7 @@
 				</div>
 				<div class="col-md-4 text-center animate-box">
 					<div class="product">
-						<div class="product-grid" style="background-image:url(images/product-5.jpg);">
+						<div class="product-grid" style="background: url(<%= asset_path 'product-5.jpg' %>);">
 							<div class="inner">
 								<p>
 									<a href="single.html" class="icon"><i class="icon-shopping-cart"></i></a>
@@ -253,7 +241,7 @@
 				</div>
 				<div class="col-md-4 text-center animate-box">
 					<div class="product">
-						<div class="product-grid" style="background-image:url(images/product-6.jpg);">
+						<div class="product-grid" style="background: url(<%= asset_path 'product-6.jpg' %>);">
 							<div class="inner">
 								<p>
 									<a href="single.html" class="icon"><i class="icon-shopping-cart"></i></a>
@@ -286,7 +274,8 @@
 							<div class="item">
 								<div class="testimony-slide active text-center">
 									<figure>
-										<img src="images/person1.jpg" alt="user">
+										<%= image_tag("person1.jpg") %>
+										<!-- <img src="assets/images/person1.jpg" alt="user"> -->
 									</figure>
 									<span>Jean Doe, via <a href="#" class="twitter">Twitter</a></span>
 									<blockquote>
@@ -297,7 +286,8 @@
 							<div class="item">
 								<div class="testimony-slide active text-center">
 									<figure>
-										<img src="images/person2.jpg" alt="user">
+										<%= image_tag("person2.jpg") %>
+										<!-- <img src="assets/images/person2.jpg" alt="user"> -->
 									</figure>
 									<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
 									<blockquote>
@@ -308,7 +298,8 @@
 							<div class="item">
 								<div class="testimony-slide active text-center">
 									<figure>
-										<img src="images/person3.jpg" alt="user">
+										<%= image_tag("person3.jpg") %>
+										<!-- <img src="assets/images/person3.jpg" alt="user"> -->
 									</figure>
 									<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
 									<blockquote>
@@ -324,7 +315,7 @@
 	</div>
 
 
-	<div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_bg_5.jpg);">
+	<div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background: url(<%= asset_path 'img_bg_5.jpg' %>);">
 		<div class="container">
 			<div class="row">
 				<div class="display-t">
@@ -464,27 +455,3 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- countTo -->
-	<script src="js/jquery.countTo.js"></script>
-	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
-	<!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
-	<script src="js/google_map.js"></script>
-
-	<!-- Main -->
-	<script src="js/main.js"></script>
-
-	</body>
-</html>
