@@ -1,0 +1,11 @@
+<h1>Items#listing</h1>
+<p>Find me in app/views/items/listing.html.erb</p>
+
+<% @item.each do |item| %>
+	<ul>
+		<li><%= item.title %></li>
+		<li><%= item.description %></li>
+		<li><%= item.price %></li>
+		<li><%= item.image_url %></li>
+	</ul>
+<% end %>  
