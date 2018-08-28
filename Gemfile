@@ -31,9 +31,12 @@ gem 'jbuilder', '~> 2.5'
 
 # Les gems qu'on ajoute nous mêmes
 
+
+gem 'jquery-rails'
+gem 'bootstrap-sass'
 gem 'bcrypt', '~> 3.1.7'
 gem 'devise', '~> 4.2'
-
+gem 'owlcarousel-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
