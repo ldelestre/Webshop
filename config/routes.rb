@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'carts/cart'
   get 'items/all', to: 'items#listing'
   devise_for :users
   get 'home/index'
