@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  get 'carts/cart'
-  get 'items/all', to: 'items#listing'
-  devise_for :users
-  get 'home/index'
-  root 'home#index'
-  resources :charges
-end
 
+	devise_for :users
+	resources :charges
+
+	root 'home#index'
+
+	get '/cart', to: 'carts#cart'
+	get '/items/all', to: 'items#listing'
+	get '/home/index'
+
+end
