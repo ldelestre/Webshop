@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'devise', '~> 4.2'
+gem 'stripe'
 
 
 # Use Capistrano for deployment
