@@ -1696,3 +1696,24 @@ h1, h2, h3, h4, h5, h6, figure {
   display: flex;
   justify-content: flex-end;
 }
+
+.formu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formu-text{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5vh;
+}
+
+.field{
+  margin-top: 1.5vh;
+}
+
+.actions{
+  margin-top: 1.5vh;
+}
