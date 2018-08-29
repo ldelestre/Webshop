@@ -5,6 +5,8 @@
 		<li><%= item.title %></li>
 		<li><%= item.description %></li>
 		<li><%= item.price %> €</li>
-		<li><%= item.image_url %></li>
+		<li><%= image_tag(item.image_url) %></li>
 	</ul>
 <% end %>
+
+<i class="fas fa-eye"></i>
