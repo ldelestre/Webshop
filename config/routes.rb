@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-
 	devise_for :users
 	resources :charges
-	resources :cart
 
 	root 'home#index'
 
@@ -13,6 +11,4 @@ Rails.application.routes.draw do
 	get '/product', to: 'home#product'
 	get '/about', to: 'home#about'
 	get '/contact', to: 'home#contact'
-
-	post '/carts/new', to: 'carts#new'
 end
