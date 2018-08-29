@@ -10,5 +10,7 @@ Rails.application.routes.draw do
 	get '/home/index'
 
 	get '/single', to: 'home#single'
-
+	get '/product', to: 'home#product'
+	get '/about', to: 'home#about'
+	get '/contact', to: 'home#contact'
 end
