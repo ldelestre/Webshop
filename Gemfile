@@ -38,6 +38,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'devise', '~> 4.2'
 gem 'owlcarousel-rails'
 gem 'stripe'
+gem 'mailjet'
+gem 'pry'
 
 
 # Use Capistrano for deployment

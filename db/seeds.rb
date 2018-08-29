@@ -9,6 +9,7 @@
 
 Item.destroy_all
 
+
 Item.create(title: 'React Element 87 Sail', description: 'La description est en maintenance', price: '100', image_url:'react-sail.png')
 Item.create(title: 'React Element 87 Black', description: 'La description est en maintenance', price: '100', image_url:'react-black.png')
 Item.create(title: 'React Element 87 Desert Sand', description: 'La description est en maintenance', price: '100', image_url:'react-desert-sand.png')
