@@ -10,4 +10,3 @@ Rails.application.routes.draw do
 	  get '/items/all', to: 'items#listing'
 	  
 end
-
