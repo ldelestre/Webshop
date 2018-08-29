@@ -16,15 +16,4 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-//= require js/owl.carousel.min
-//= require js/bootstrap.min
-//= require js/google_map
-//= require js/jquery.countTo
-//= require js/jquery.easing.1.3
-//= require js/jquery.flexslider-min
-//= require js/jquery.min
-//= require js/jquery.waypoints.min
-//= require js/main
-//= require js/modernizr-2.6.2.min
-//= require js/bootstrap.min
-//= require js/respond.min
+
