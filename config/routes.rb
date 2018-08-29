@@ -7,6 +7,5 @@ Rails.application.routes.draw do
 
 	get '/cart', to: 'carts#cart'
 	get '/items/all', to: 'items#listing'
-	get '/home/index'
 
 end
