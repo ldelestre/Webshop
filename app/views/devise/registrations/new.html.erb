@@ -1,4 +1,8 @@
+<div class="forms">
+  <div class="form_title">
 <h2>Sign up</h2>
+</div>
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -21,11 +25,8 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <%= f.label :address, 'address' %>
-  <%= f.text_field :address %> 
-
   <div class="actions">
-    <%= f.submit "Sign up" %>
+   <%= f.submit "Sign up" %>
   </div>
 <% end %>
 

@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get 'home/index'
   root 'home#index'
   resources :charges
+  get '/account', to: 'home#account'
 end
-
