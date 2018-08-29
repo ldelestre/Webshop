@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 	get '/items/all', to: 'items#listing'
 	get '/home/index'
 
+	get '/single', to: 'home#single'
+
 end
