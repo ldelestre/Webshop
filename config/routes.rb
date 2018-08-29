@@ -1,24 +1,18 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
 	devise_for :users
 	resources :charges
+	resources :cart
 
 	root 'home#index'
 
 	get '/cart', to: 'carts#cart'
 	get '/items/all', to: 'items#listing'
 
+	get '/single', to: 'home#single'
+	get '/product', to: 'home#product'
+	get '/about', to: 'home#about'
+	get '/contact', to: 'home#contact'
+
+	post '/carts/new', to: 'carts#new'
 end
-=======
-	  get 'items/all', to: 'items#listing'
-	  devise_for :users
-	  get 'home/index'
-	  root 'home#index'
-	  resources :charges
-	  get '/account', to: 'home#account'
-	  get '/cart', to: 'carts#cart'
-	  get '/items/all', to: 'items#listing'
-	  
-end
->>>>>>> Developpement

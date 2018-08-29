@@ -3,6 +3,6 @@ class CartsController < ApplicationController
   end
 
   def create
-  	@cart = Cart.create(params[:user_id, user_id])
+ 	Cart.create(params[:user_id, user_id])
   end
 end
