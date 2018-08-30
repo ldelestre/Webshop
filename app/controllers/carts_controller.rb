@@ -1,8 +1,53 @@
 class CartsController < ApplicationController
+  before_action :set_cart, only: [:create, :destroy]
+  before_action :set_item, only: [:destroy]
+  before_action :authenticate_user!
+
   def cart
+    @user = current_user
+    @carts = Cart.all
+  end
+
+  def new
   end
 
   def create
-  	@cart = Cart.create(params[:user_id, user_id])
+    puts "=========================="
+    puts
+    puts
+    puts params.inspect
+    puts
+    puts
+    puts "=========================="
+    @user = current_user
+    new_item = add_product(@user, params)
+    @cart = Cart.new(user: new_item[:user], item: new_item[:item]) 
+
+      if @cart.save
+        redirect_to root_path
+      else
+        flash[:error] = 'There was a problem adding this item to your cart.'
+        redirect_to @product
   end
+end
+  def destroy
+    @item.destroy
+    redirect_to cart_path
+  end
+
+  private
+
+  def set_item
+    @item = Item.find(params[:id])
+  end
+
+  def item_params
+    params.require(:item).permit(:id, :cart_id, :quantity)
+  end
+
+  def add_product(current_user, product_params)
+      current_item = Item.find_by(id: product_params[:id])
+
+      new_item = {user: current_user, item: current_item}
+   end
 end
