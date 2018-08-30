@@ -1,21 +1,25 @@
 <h1>Your cart</h1>
 
-<div id="items-added">
-	<ul>
-		<li>Image</li>
-		<li>Title</li>
-		<li>Prix</li>
-		<button>Remove</button>
-	</ul>
-</div>
+<span style="display: none;"><%= var = 0 %></span>
+<% @user.items.each do |item| %>
+	<div id="items-added">
+		<ul>
 
+			<li><%= item.image_url %></li>
+			<li><%= item.title %></li>
+			<li><%= item.description %></li>
+			<li><%= var += item.price %>€</li>
+			<button>Remove</button>
+		</ul>
+	</div>
+<% end %>
 <br/>
 
 <div id="total">
 	<ul>
-		<li>Subtotal</li>
-		<li>Shipping</li>
-		<li>Total</li>
+		<li>Subtotal <%= var %>€</li>
+		<li>Shipping : <%= ship = 24.0 %>€</li>
+		<li>Total <%= var + ship %>€</li>
 		<button>Place your order</button>
 	</ul>
 </div>

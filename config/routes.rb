@@ -5,7 +5,12 @@ Rails.application.routes.draw do
 
 	root 'home#index'
 
-	get '/cart', to: 'carts#cart'
+	get '/cart', to: 'carts#cart', as: 'cart'
+	
+	# do not touch this line !!!
+	get 'carts/create/:id', to:'carts#create', as: 'add_to_cart'
+	# ==========================
+	
 	get '/items/all', to: 'items#listing'
 	get '/home/index'
 
