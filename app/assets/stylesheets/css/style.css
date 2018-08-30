@@ -570,19 +570,15 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .fh5co-contact-info ul li.address:before {
   font-size: 30px;
-  content: "\e9d1";
 }
 .fh5co-contact-info ul li.phone:before {
   font-size: 23px;
-  content: "\e9f4";
 }
 .fh5co-contact-info ul li.email:before {
   font-size: 23px;
-  content: "\e9da";
 }
 .fh5co-contact-info ul li.url:before {
   font-size: 23px;
-  content: "\e9af";
 }
 
 #fh5co-header .display-tc,
