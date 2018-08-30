@@ -1,6 +1,6 @@
 <div class="formu">
   <div class="formu-text">
-		<h1>Your cart</h1>
+		<h1>Your cart:</h1>
 <div class="global-cart">
 		<span style="display: none;"><%= var = 0 %></span>
 		<% @user.items.each do |item| %>
@@ -16,24 +16,23 @@
           	<li><%= item.description %></li>
           </div>
           <div class="cart_data">
-      			<li><%= var += item.price %>€</li>
+			      <span style="display: none;"><%= var += item.price %></span>
           </div>
-      			<%= button_to "Remove", remove_from_cart_path(Cart.find_by(item: item).item.id), data: { confirm: "Are you sure?" }, method: :delete, :class=>"btn btn-primary btn-outline btn-lg"  %>
-      		</ul>
-      </div>
+			      <li><%= item.price %>€</li>
+		    	<%= button_to "Remove", remove_from_cart_path(Cart.find_by(item: item).item.id), data: { confirm: "Are you sure?" }, method: :delete, :class=>"btn btn-primary btn-outline btn-lg"  %>
+		    </ul>
+    	</div>
+    <% end %>
+<br/>
 
-  <% end %>
-  <br/>
+<div id="total">
+	<ul>
+		<li>Subtotal <%= var %>€</li>
+		<li>Shipping : <%= ship = 24.0 %>€</li>
+		<li>Total <%= var + ship %>€</li>
+		<button class= "btn btn-primary btn-outline btn-lg" ><%= link_to "Place Your Order", new_charge_path %></button>
+	</ul>
 
-		<div id="total">
-			<ul>
-        <div class="global-cart">
-  				<li>Subtotal <%= var %>€</li>
-  				<li>Shipping : <%= ship = 24.0 %>€</li>
-  				<li>Total <%= var + ship %>€</li>
-  				<button class= "btn btn-primary btn-outline btn-lg" >Place your order</button>
-        </div>
-      </ul>
 		</div>
 	</div>
 </div>
