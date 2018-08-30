@@ -1,29 +1,40 @@
 <div class="formu">
   <div class="formu-text">
 		<h1>Your cart</h1>
-
+<div class="global-cart">
 		<span style="display: none;"><%= var = 0 %></span>
 		<% @user.items.each do |item| %>
 			<div id="items-added">
 				<ul>
+          <div class="cart_data">
+            <li><%= image_tag item.image_url, :class=>"image_resize" %></li>
+          </div>
+          <div class="cart_data">
+      			<li><%= item.title %></li>
+          </div>
+          <div class="cart_data">
+          	<li><%= item.description %></li>
+          </div>
+          <div class="cart_data">
+      			<li><%= var += item.price %>€</li>
+          </div>
+      			<%= button_to "Remove", remove_from_cart_path(Cart.find_by(item: item).item.id), data: { confirm: "Are you sure?" }, method: :delete, :class=>"btn btn-primary btn-outline btn-lg"  %>
+      		</ul>
+      </div>
 
-			<li><%= item.image_url %></li>
-			<li><%= item.title %></li>
-			<li><%= item.description %></li>
-			<li><%= var += item.price %>€</li>
-			<%= button_to "Remove", remove_from_cart_path(Cart.find_by(item: item).item.id), data: { confirm: "Are you sure?" }, method: :delete, :class=>"btn btn-primary btn-outline btn-lg"  %>
-		</ul>
-	</div>
-<% end %>
-<br/>
+  <% end %>
+  <br/>
 
 		<div id="total">
 			<ul>
-				<li>Subtotal <%= var %>€</li>
-				<li>Shipping : <%= ship = 24.0 %>€</li>
-				<li>Total <%= var + ship %>€</li>
-				<button class= "btn btn-primary btn-outline btn-lg" >Place your order</button>
-			</ul>
+        <div class="global-cart">
+  				<li>Subtotal <%= var %>€</li>
+  				<li>Shipping : <%= ship = 24.0 %>€</li>
+  				<li>Total <%= var + ship %>€</li>
+  				<button class= "btn btn-primary btn-outline btn-lg" >Place your order</button>
+        </div>
+      </ul>
 		</div>
 	</div>
+</div>
 </div>
