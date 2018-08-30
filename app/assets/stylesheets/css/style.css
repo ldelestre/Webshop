@@ -1716,10 +1716,30 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-top: 1.5vh;
 }
 
-.text-account {
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+.global-cart{
   display: flex;
   flex-direction: column;
-  text-align: center;
+  justify-content: center;
+}
+
+.image_resize{
+  width: 10vw;
+  height: auto;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.btn-stripe{
+  margin-top: 2vh;
+  margin-bottom: 20vh;
+}  
+
+.text-account {
+padding-top: 10vh;
+padding-bottom: 10vh;
+display: flex;
+flex-direction: column;
+text-align: center;
 }
