@@ -1,1 +1,9 @@
-<h1>Welcome to your account</h1>
+<div class="text-account">
+	<h4>Welcome to your account. You're logged in with the following email : <strong><%= current_user.email %></strong>. </h4>
+	<h2>Here is your recent orders :</h2>
+
+	<ul><% @orders.each do |order| %>
+		<li>You've placed the order N°<%= order.id(find_by(:user_id, current_user.id)) %> at <%= order.date(find_by(:user_id, current_user.id)) %></li>
+	</ul><% end %>
+
+</div>

@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   	@items = Item.all
   end
   def account
+    @orders = Order.all
   end
   def single
   	@item = Item.find_by(id: params[:id])

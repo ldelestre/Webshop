@@ -1715,3 +1715,11 @@ h1, h2, h3, h4, h5, h6, figure {
 .actions{
   margin-top: 1.5vh;
 }
+
+.text-account {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
