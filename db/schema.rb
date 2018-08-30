@@ -34,12 +34,11 @@ ActiveRecord::Schema.define(version: 2018_08_30_055334) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.bigint "item_id"
+    t.bigint "cart_id"
     t.bigint "user_id"
-    t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["item_id"], name: "index_orders_on_item_id"
+    t.index ["cart_id"], name: "index_orders_on_cart_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -59,6 +58,6 @@ ActiveRecord::Schema.define(version: 2018_08_30_055334) do
 
   add_foreign_key "carts", "items"
   add_foreign_key "carts", "users"
-  add_foreign_key "orders", "items"
+  add_foreign_key "orders", "carts"
   add_foreign_key "orders", "users"
 end
