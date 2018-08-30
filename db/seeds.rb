@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Cart.all.destroy_all
+Order.all.destroy_all
 Item.destroy_all
 
 Item.create(title: 'React Element 87 Sail', description: 'La description est en maintenance', price: '450', image_url:'react-sail.png')
