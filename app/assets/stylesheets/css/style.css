@@ -153,6 +153,8 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .fh5co-nav .menu-2 li.shopping-cart {
   float: right;
+  margin-top: -2vh;
+  margin-bottom: -5vh;
 }
 .fh5co-nav .menu-2 li a.cart {
   color: black;
