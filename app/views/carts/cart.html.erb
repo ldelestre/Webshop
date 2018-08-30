@@ -1,25 +1,29 @@
-<h1>Your cart</h1>
+<div class="formu">
+  <div class="formu-text">
+		<h1>Your cart</h1>
 
-<span style="display: none;"><%= var = 0 %></span>
-<% @user.items.each do |item| %>
-	<div id="items-added">
-		<ul>
+		<span style="display: none;"><%= var = 0 %></span>
+		<% @user.items.each do |item| %>
+			<div id="items-added">
+				<ul>
 
-			<li><%= item.image_url %></li>
-			<li><%= item.title %></li>
-			<li><%= item.description %></li>
-			<li><%= var += item.price %>€</li>
-			<button>Remove</button>
-		</ul>
+					<li><%= item.image_url %></li>
+					<li><%= item.title %></li>
+					<li><%= item.description %></li>
+					<li><%= var += item.price %>€</li>
+					<button class= "btn btn-primary btn-outline btn-lg" >Remove</button>
+				</ul>
+			</div>
+		<% end %>
+		<br/>
+
+		<div id="total">
+			<ul>
+				<li>Subtotal <%= var %>€</li>
+				<li>Shipping : <%= ship = 24.0 %>€</li>
+				<li>Total <%= var + ship %>€</li>
+				<button class= "btn btn-primary btn-outline btn-lg" >Place your order</button>
+			</ul>
+		</div>
 	</div>
-<% end %>
-<br/>
-
-<div id="total">
-	<ul>
-		<li>Subtotal <%= var %>€</li>
-		<li>Shipping : <%= ship = 24.0 %>€</li>
-		<li>Total <%= var + ship %>€</li>
-		<button>Place your order</button>
-	</ul>
 </div>
