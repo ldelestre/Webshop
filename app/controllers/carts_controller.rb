@@ -12,13 +12,6 @@ class CartsController < ApplicationController
   end
 
   def create
-    puts "=========================="
-    puts
-    puts
-    puts params.inspect
-    puts
-    puts
-    puts "=========================="
     @user = current_user
     new_item = add_product(@user, params)
     @cart = Cart.new(user: new_item[:user], item: new_item[:item]) 
@@ -31,14 +24,16 @@ class CartsController < ApplicationController
   end
 end
   def destroy
-    @item.destroy
+    @user = current_user
+    @cart = Cart.where(user: @user).where(item: @item)
+    @cart.destroy_all
     redirect_to cart_path
   end
 
   private
 
   def set_item
-    @item = Item.find(params[:id])
+    @item = Item.find(params[:format].to_i)
   end
 
   def item_params

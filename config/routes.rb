@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
 	# do not touch this line !!!
 	get 'carts/create/:id', to:'carts#create', as: 'add_to_cart'
+	delete 'carts/create/id', to: 'carts#destroy', as: 'remove_from_cart'
 	# ==========================
 
 	get '/items/all', to: 'items#listing'
