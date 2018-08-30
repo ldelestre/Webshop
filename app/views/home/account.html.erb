@@ -2,8 +2,20 @@
 	<h4>Welcome to your account. You're logged in with the following email : <strong><%= current_user.email %></strong>. </h4>
 	<h2>Here is your recent orders :</h2>
 
-	<ul><% @orders.each do |order| %>
-		<li>You've placed the order N°<%= order.id(find_by(:user_id, current_user.id)) %> at <%= order.date(find_by(:user_id, current_user.id)) %></li>
-	</ul><% end %>
+	<ul>
+		<% @arr.each do |date| %>
+			<span style="display: none;"><%= var = 24.0 %></span>
+			<li>You've placed the order N°<%= Order.find_by(date: date).id %> at <%= date %></li>
+			<ul>
+				<% Order.where(date: date).each do |order| %>
+					<span style="display: none;"><%= var += order.item.price%></span>
+					<li><%= order.item.title %> : <%= order.item.price %></li>
+				<% end %>
+				<li>Plus $24.0 for shippement</li>
+				<li> <strong>Total : $<%= var %></strong> </li>
+			</ul>
+			<br>
+		<% end %>
+	</ul>
 
 </div>
