@@ -9,20 +9,17 @@
       <div class="col-md-6 col-xs-6 text-center menu-1">
         <ul>
           <li class="has-dropdown">
-            <a href="product.html">Shop</a>
-            <ul class="dropdown">
-              <li><a href="single.html">Single Shop</a></li>
-            </ul>
+            <a href="/product">Sneakers</a>
           </li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="/about">About</a></li>
 
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
       <div class="col-md-3 col-xs-4 text-right hidden-xs menu-2">
         <ul>
           <li class="has-dropdown">
-            <a href="services.html">User</a>
+            <a href="/">User</a>
             <ul class="dropdown">
               <% if user_signed_in? %>
               <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>

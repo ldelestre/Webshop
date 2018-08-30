@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-* 	Template Style
+*   Template Style
 *
 * ======================================================= */
 body {
@@ -720,7 +720,8 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-about,
 #fh5co-contact,
 #fh5co-footer {
-  padding: 7em 0;
+  padding: 5em 0;
+  padding-bottom: 4em;
   clear: both;
 }
 @media screen and (max-width: 768px) {
@@ -1157,7 +1158,7 @@ h1, h2, h3, h4, h5, h6, figure {
   text-decoration: underline;
 }
 #fh5co-footer .fh5co-widget {
-  margin-bottom: 30px;
+  margin-bottom: -3vh;
 }
 @media screen and (max-width: 768px) {
   #fh5co-footer .fh5co-widget {
@@ -1684,20 +1685,6 @@ h1, h2, h3, h4, h5, h6, figure {
   opacity: 0;
 }
 
-/*page login & sign up*/
-.forms {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.form_title {
-  margin-top: 5vh;
-  
-}
-
-/*# sourceMappingURL=style.css.map */
 .img-preview{
   display: flex;
   justify-content: center;
@@ -1705,3 +1692,28 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-bottom: -15vh;
 }
 /*# sourceMappingURL=style.css.map */
+.footer-link{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.formu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formu-text{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5vh;
+}
+
+.field{
+  margin-top: 1.5vh;
+}
+
+.actions{
+  margin-top: 1.5vh;
+}
