@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :single, :product, :services, :about, :contact]
   def index
   	@items = Item.all
   end
@@ -15,6 +16,6 @@ class HomeController < ApplicationController
   end
 
   def product
-  	@items = Item.where(user: current_user)
+   	@items = Item.all
   end
 end
