@@ -16,13 +16,14 @@ class ChargesController < ApplicationController
 	def create
 		@user = current_user
 		@cart = Cart.where(user: @user)
-		# @date = Time.new
+		@date = Time.new
 		@total_price = 24.0
 		@cart.each do |c|
 			@total_price += c.item.price
-			# Order.create(user: @user, item: c.item, date: @date)
-			# c.destroy_all
+			Order.create(user: @user, item: c.item, date: @date)
+			c.destroy
 		end
+
 	  # Amount in cents
 	  puts "===================="
 	  puts
@@ -38,7 +39,7 @@ class ChargesController < ApplicationController
 
 	  charge = Stripe::Charge.create(
 	    :customer    => customer.id,
-	    :amount      => @total_price.to_i,
+	    :amount      => @total_price.to_i * 100,
 	    :description => 'Order on Webshop-X',
 	    :currency    => 'usd'
 	  )
