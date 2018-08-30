@@ -9,7 +9,6 @@
 			<li><%= item.title %></li>
 			<li><%= item.description %></li>
 			<li><%= var += item.price %>€</li>
-			<button>Remove</button>
 			<%= button_to "Remove", remove_from_cart_path(Cart.find_by(item: item).item.id), data: { confirm: "Are you sure?" }, method: :delete, :class=>"btn btn-primary btn-outline btn-lg"  %>
 		</ul>
 	</div>
