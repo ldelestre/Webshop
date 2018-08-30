@@ -30,9 +30,9 @@
               <% end %>
             </ul>
           </li>
-          <li class="shopping-cart"><%= link_to simple_format('<span><small>'+current_user.items.count.to_s+'</small><i class="fas fa-shopping-cart"></i></span>'), cart_path(id: 'home'), class: 'cart' %>
-            <!-- <a href= '/cart' class="cart"><span><small>0</small><i class="fas fa-shopping-cart"></i></span></a> --></li>
-
+          <% if user_signed_in? %>
+                   <li class="shopping-cart"><%= link_to simple_format('<span><small>'+current_user.items.count.to_s+'</small><i class="fas fa-shopping-cart"></i></span>'), cart_path(id: 'home'), class: 'cart' %>
+                     <% end %>
         </ul>
 
       </div>
