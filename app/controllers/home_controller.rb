@@ -15,6 +15,6 @@ class HomeController < ApplicationController
   end
 
   def product
-  	@items = Item.where(user: current_user)
+   	@items = Item.all
   end
 end
