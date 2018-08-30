@@ -8,7 +8,8 @@
 			<li><%= item.image_url %></li>
 			<li><%= item.title %></li>
 			<li><%= item.description %></li>
-			<li><%= var += item.price %>€</li>
+			<span style="display: none;"><%= var += item.price %></span>
+			<li><%= item.price %>€</li>
 			<%= button_to "Remove", remove_from_cart_path(Cart.find_by(item: item).item.id), data: { confirm: "Are you sure?" }, method: :delete, :class=>"btn btn-primary btn-outline btn-lg"  %>
 		</ul>
 	</div>
@@ -20,6 +21,6 @@
 		<li>Subtotal <%= var %>€</li>
 		<li>Shipping : <%= ship = 24.0 %>€</li>
 		<li>Total <%= var + ship %>€</li>
-		<button>Place your order</button>
+		<button class="btn btn-primary btn-outline btn-lg"><%= link_to "Place Your Order", new_charge_path %></button>
 	</ul>
 </div>
