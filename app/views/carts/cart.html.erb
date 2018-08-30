@@ -26,13 +26,15 @@
 <br/>
 
 <div id="total">
+    <div class="cart_btn_bot">
 	<ul>
 		<li>Subtotal <%= var %>€</li>
 		<li>Shipping : <%= ship = 24.0 %>€</li>
 		<li>Total <%= var + ship %>€</li>
+
 		<button class= "btn btn-primary btn-outline btn-lg" ><%= link_to "Place Your Order", new_charge_path %></button>
 	</ul>
-
+</div>
 		</div>
 	</div>
 </div>
