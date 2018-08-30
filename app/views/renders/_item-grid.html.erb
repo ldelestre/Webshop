@@ -16,12 +16,12 @@
                   <div class="inner">
                     <p>
                       <a href= <%= add_to_cart_path(item.id) %> class="icon"><i class="fas fa-shopping-cart"></i></a>
-                      <a href="single.html" class="icon"><i class="fas fa-eye"></i></i></a>
+                      <a href=<%= single_path(item.id) %> class="icon"><i class="fas fa-eye"></i></i></a>
                     </p>
                   </div>
                 </div>
                 <div class="desc">
-                  <h3><a href="single.html"><%= item.title %></a></h3>
+                  <h3><a href=<%= single_path(item.id) %>><%= item.title %></a></h3>
                   <span class="price"><%= item.price %>$</span>
                 </div>
               </div>
