@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :single, :product, :services, :about, :contact]
   def index
   	@items = Item.all
   end
