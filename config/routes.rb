@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 	get '/home/index'
 
 	get '/single/:id', to: 'home#single', as: 'single'
-	get '/product', to: 'home#product'
+	get '/product', to: 'home#product', as: 'product'
 	get '/about', to: 'home#about'
 	get '/contact', to: 'home#contact'
 	get '/services', to: 'home#services'
