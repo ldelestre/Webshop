@@ -11,12 +11,13 @@
           <span>Amount: $<%= @total_price %></span>
         </label>
       </article>
-
+    <div class="btn-stripe">
       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
               data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
               data-description="A month's subscription"
               data-amount=<%= @total_price.to_i * 100 %>
               data-locale="auto"></script>
     <% end %>
+    </div>
   </div>
 </div>
